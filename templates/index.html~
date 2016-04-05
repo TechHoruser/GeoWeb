@@ -1,0 +1,19 @@
+<html>
+<head>
+	<link rel="stylesheet"  type="text/css" href="{{url_for('static', filename='style.css')}}">
+	{{mapa.js}}
+</head>
+<body>
+	<div id="izquierda">
+		<div width=800 height=600>{{mapa.html}}</div>
+	</div>
+	<div id="derecha">
+		<h1>#{{tag}}</h1>
+		<ul>
+			{% for twits in listado %}
+			<li style="list-style-image:url({{twits['usuario']['profile_image_url']}});">Usuario: {{twits['usuario']['screen_name']}}<br>Lugar: {{twits['lugar']}}<br>Momento: {{twits['momento']}}</li>
+			{% endfor %}
+		</ul>
+	</div>
+</body>
+</hmtl>

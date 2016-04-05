@@ -1,0 +1,12 @@
+.centrado{
+	text-align: center;
+}
+
+.izquierda{
+	float: left;
+}
+
+.derecha{
+	float: right;
+	width: 400px;
+}
