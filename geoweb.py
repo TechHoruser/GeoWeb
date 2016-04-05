@@ -5,9 +5,10 @@ import json
 import datetime
 
 from datetime import timedelta
-from flask import Flask, render_template
+from flask import Flask, request, render_template
 from flask.ext.googlemaps import GoogleMaps
 from flask.ext.googlemaps import Map
+
 
 #Funcion para la conexion.
 def oauth_login():
@@ -55,18 +56,12 @@ GoogleMaps(app)
 
 @app.route('/')
 def index():
-	mapa = Map(
-		identifier="view-side",
-		lat=40.3450396,
-		lng=-3.6517684,
-		markers=[(36.6703957, -5.3394454),(40.3120713, -3.8890049)],
-		style="height:800px;width:800px;margin:0;"
-	)
-		
-	return render_template('index.html', mapa=mapa)
+	return render_template('index.html')
 
-@app.route('/tag/<tag>')
-def user(tag):
+@app.route('/tag', methods=['POST'])
+def tag():
+	tag = request.form['tag']
+
 	listado = geo(oauth_login(),tag)
 	l={}
 
