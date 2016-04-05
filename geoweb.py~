@@ -45,23 +45,7 @@ def geo(tw,ht):
             
     return listado
 
-
-
-
-
-
-
-app = Flask(__name__)
-GoogleMaps(app)
-
-@app.route('/')
-def index():
-	return render_template('index.html')
-
-@app.route('/tag', methods=['POST'])
-def tag():
-	tag = request.form['tag']
-
+def tag(tag):
 	listado = geo(oauth_login(),tag)
 	l={}
 
@@ -78,6 +62,25 @@ def tag():
 	)
 
 	return render_template('tag.html', mapa=mapa, tag=tag, listado=listado)
+
+
+
+
+app = Flask(__name__)
+GoogleMaps(app)
+
+@app.route('/')
+def index():
+	return render_template('index.html')
+
+@app.route('/tag/<tag>')
+def tag1(tag):
+	return tag(tag)
+	
+@app.route('/tag/', methods=['POST'])
+def tag2():
+	return tag(request.form['tag'])
+
 
 if __name__ == "__main__":
     app.run(debug=True)
