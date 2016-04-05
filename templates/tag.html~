@@ -9,7 +9,6 @@
 	</div>
 	<div class="derecha" width=400>
 		<h1>#{{tag}}</h1>
-		<ul>
 			{% for twits in listado %}
 			<div class="centrado">
 				<img src="{{twits['usuario']['profile_image_url']}}" alt="{{twits['usuario']['screen_name']}}">
@@ -22,7 +21,6 @@
 				</ul>
 			</div>
 			{% endfor %}
-		</ul>
 	</div>
 </body>
 </hmtl>

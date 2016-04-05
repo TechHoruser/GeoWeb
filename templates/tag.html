@@ -9,18 +9,19 @@
 	</div>
 	<div class="derecha" width=400>
 		<h1>#{{tag}}</h1>
-			{% for twits in listado %}
-			<div class="centrado">
-				<img src="{{twits['usuario']['profile_image_url']}}" alt="{{twits['usuario']['screen_name']}}">
-				<h3>{{twits['usuario']['screen_name']}}</h3>
-			</div>
-			<div>
-				<ul>
-					<li>Lugar: {{twits['lugar']}}</li>
-					<li>Momento: {{twits['momento']}}</li>
-				</ul>
-			</div>
-			{% endfor %}
+
+		{% for twits in listado %}
+		<div class="centrado">
+			<img src="{{twits['usuario']['profile_image_url']}}" alt="{{twits['usuario']['screen_name']}}">
+			<h3>{{twits['usuario']['screen_name']}}</h3>
+		</div>
+		<div>
+			<ul>
+				<li>Lugar: {{twits['lugar']}}</li>
+				<li>Momento: {{twits['momento']}}</li>
+			</ul>
+		</div>
+		{% endfor %}
 	</div>
 </body>
 </hmtl>
