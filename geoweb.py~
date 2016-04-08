@@ -12,6 +12,10 @@ from flask.ext.googlemaps import Map
 
 #Funcion para la conexion.
 def oauth_login():
+    CONSUMER_KEY = 'kvAbp1mrWFTvUtdwMZm2SbnGE'
+    CONSUMER_SECRET = 'Ht9iRfXzh3mXr0994zLuCSGZHZc5mMvhddNqhP8yjS6a5Qhb3u'
+    OAUTH_TOKEN = '722369984-8cG7gCQxWL6cCJHstWAZCQ1ADz2LdNjLs38EpEjw'
+    OAUTH_TOKEN_SECRET = 'KNkkFKjZy6QMJKA5yTLb6e8BLjGwnrAqqkBGNs7Oji4Nu'
     CONSUMER_KEY = 'olCGavekol2fbLebHRejjaoR6'
     CONSUMER_SECRET = 'Ht9iRfXzh3mXr0994zLuCSGZHZc5mMvhddNqhP8yjS6a5Qhb3u'
     OAUTH_TOKEN = '722369984-8cG7gCQxWL6cCJHstWAZCQ1ADz2LdNjLs38EpEjw'
@@ -45,7 +49,7 @@ def geo(tw,ht):
             
     return listado
 
-def tag(tag):
+def tagMethod(tag):
 	listado = geo(oauth_login(),tag)
 	l={}
 
@@ -75,11 +79,11 @@ def index():
 
 @app.route('/tag/<tag>')
 def tag1(tag):
-	return tag(tag)
+	return tagMethod(tag)
 	
 @app.route('/tag/', methods=['POST'])
 def tag2():
-	return tag(request.form['tag'])
+	return tagMethod(request.form['tag'])
 
 
 if __name__ == "__main__":

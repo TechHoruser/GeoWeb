@@ -2,11 +2,11 @@
 <head>
 	<link rel="stylesheet"  type="text/css" href="{{url_for('static', filename='style.css')}}">
 </head>
-<body>
-	<h1>GeoWeb</h1>
+<body id="login" class="centrado">
+	<h1 class="white">GeoWeb</h1>
 	<form action="/tag/" method="POST">
-		<input type="text" name="tag">
-		<input type="submit" value="Buscar">
+		<input id="tag" type="text" name="tag"><br>
+		<input id="boton" type="submit" value="Buscar">
 	</form>
 </body>
 </hmtl>

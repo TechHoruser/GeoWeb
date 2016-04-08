@@ -21,8 +21,8 @@
 				<li>Momento: {{twits['momento']}}</li>
 				<li>Coordenadas:
 					<ul>
-						<li></li>
-						<li></li>
+						<li>Longitud: {{twits['longitud']}}</li>
+						<li>Latitud: {{twits['latitud']}}</li>
 					</ul>
 				</li>
 			</ul>

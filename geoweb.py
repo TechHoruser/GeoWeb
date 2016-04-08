@@ -12,10 +12,10 @@ from flask.ext.googlemaps import Map
 
 #Funcion para la conexion.
 def oauth_login():
-    CONSUMER_KEY = 'olCGavekol2fbLebHRejjaoR6'
-    CONSUMER_SECRET = 'Ht9iRfXzh3mXr0994zLuCSGZHZc5mMvhddNqhP8yjS6a5Qhb3u'
-    OAUTH_TOKEN = '722369984-8cG7gCQxWL6cCJHstWAZCQ1ADz2LdNjLs38EpEjw'
-    OAUTH_TOKEN_SECRET = 'KNkkFKjZy6QMJKA5yTLb6e8BLjGwnrAqqkBGNs7Oji4Nu'
+    CONSUMER_KEY = 'kvAbp1mrWFTvUtdwMZm2SbnGE'
+    CONSUMER_SECRET = 'WqGXQIpOVKbjwP8FRWF4u7Xy3kc5kMkujuvEDT9fqZfBiykCLI'
+    OAUTH_TOKEN = '7730092-BvcE6lKJs8455JE8hyEhYHKXHX5g9X05izuuU47qIX'
+    OAUTH_TOKEN_SECRET = 'xGzotzBjBImJNDLAogP60jb3GVlRnp3M9jtp3QSFgJDAI'
 
     auth = twitter.oauth.OAuth(OAUTH_TOKEN, OAUTH_TOKEN_SECRET, CONSUMER_KEY, CONSUMER_SECRET)
 

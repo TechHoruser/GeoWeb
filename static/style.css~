@@ -1,12 +1,37 @@
+body {
+	background-image: url("fondo-index.jpg");
+}
+
 .centrado{
 	text-align: center;
 }
 
-#izquierda{
+.izquierda{
 	float: left;
 }
 
-#derecha{
+.derecha{
 	float: right;
 	width: 400px;
+}
+
+.white{
+	color: white;
+}
+
+#tag{
+	width: 12em;
+}
+
+#login{
+	padding-top: 10%;
+}
+
+#boton{
+	width: 12em;
+}
+
+#listado{
+	opacity: 0.5;
+	background-color: white;
 }
