@@ -6,8 +6,8 @@ import datetime
 
 from datetime import timedelta
 from flask import Flask, request, render_template
-from flask.ext.googlemaps import GoogleMaps
-from flask.ext.googlemaps import Map
+from flask_googlemaps import GoogleMaps
+from flask_googlemaps import Map
 
 
 #Funcion para la conexion.
